@@ -40,15 +40,19 @@
 
 		<div data-role="content" id="content">
 			<div role="main" class="ui-content" id="total-count">
-				<ul id="autocomplete" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Find a name by letters." data-filter-theme="a"></ul>
+			
+			    <input type="search" name="search" id="search-field" value="" placeholder="Search by letters!">
+				<input type="button" id="search-button" value="Search">
 				<ul data-role="listview" data-count-theme="b" data-inset="true">
-					<li><a href="#namelistpage" id="girlname_list">Girl name<span class="ui-li-count">20000</span></a></li>
-					<li><a href="#" id="boyname_list">Boy name<span class="ui-li-count">18000</span></a></li>
+					<li><a href="#namelistpage" id="girlname_list">Girl names<span class="ui-li-count">20000</span></a></li>
+					<li><a href="#" id="boyname_list">Boy names<span class="ui-li-count">18000</span></a></li>
 				</ul>
 				<ul data-role="listview" data-count-theme="b" data-inset="true">
-					<li><a href="#" id="randomname">Random name</a></li>
-					<li><a href="#" id="randomgirlname">Random girl name</a></li>
-					<li><a href="#" id="randomboyname">Random boy name</a></li>
+					<li><a href="#" id="lucky">I'm feeling lucky!</a></li>
+				</ul>
+				<ul data-role="listview" data-count-theme="b" data-inset="true">
+					<li><a href="#namelistpage" id="girlname_list">Girl Names (A to Z)</a></li>
+					<li><a href="#namelistpage" id="girlname_list">Boy Names (A to Z)</a></li>
 				</ul>
 			</div>
 		</div>
@@ -70,6 +74,7 @@
 		<ul id="namelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true">
 		
 		</ul>
+		<input type="button" id="loadmore" value="Load More">
 		<!-- /content -->
 
 		<div data-role="footer" id="footer" data-position="fixed">

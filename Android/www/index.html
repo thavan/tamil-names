@@ -39,44 +39,68 @@
 		<!-- /header -->
 
 		<div data-role="content" id="content">
-			<div role="main" class="ui-content" id="total-count">
-				<ul id="autocomplete" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Find a name by letters." data-filter-theme="a"></ul>
+			<div data-role="main" class="ui-content" id="total-count">
+			    <input type="search" name="search" id="search-field" value="" placeholder="Search by letters!">
+				<input type="button" id="search-button" value="Search">
 				<ul data-role="listview" data-count-theme="b" data-inset="true">
-					<li><a href="#namelistpage" id="girlname_list">Girl name<span class="ui-li-count">20000</span></a></li>
-					<li><a href="#" id="boyname_list">Boy name<span class="ui-li-count">18000</span></a></li>
+					<li><a href="#namelistpage" id="girlname_list">Girl names<span class="ui-li-count">20000</span></a></li>
+					<li><a href="#" id="boyname_list">Boy names<span class="ui-li-count">18000</span></a></li>
+					<li><a href="#" id="allname_list">Boy names<span class="ui-li-count">38000</span></a></li>
 				</ul>
 				<ul data-role="listview" data-count-theme="b" data-inset="true">
-					<li><a href="#" id="randomname">Random name</a></li>
-					<li><a href="#" id="randomgirlname">Random girl name</a></li>
-					<li><a href="#" id="randomboyname">Random boy name</a></li>
+					<li><a href="#" id="lucky">I'm feeling lucky!</a></li>
+				</ul>
+				<ul data-role="listview" data-count-theme="b" data-inset="true">
+					<li><a href="#namelistpage" id="girlname_list">Girl Names (A to Z)</a></li>
+					<li><a href="#namelistpage" id="girlname_list">Boy Names (A to Z)</a></li>
 				</ul>
 			</div>
 		</div>
 		<!-- /content -->
-
-		<div data-role="footer" id="footer" data-position="fixed">
-			<div data-role="nav-bar" id="navbar"></div>
-		</div>
-		<!-- /footer -->
 	</div>
 	<!-- /page -->
-	
-	<div data-role="page" id="namelistpage">
+
+	<div data-role="page" id="searchlistpage">
 		<div data-role="header">
-			<h5>Baby Names</h3>
+			<h5>Search Results</h3>
 		</div>
 		<!-- /header -->
-
-		<ul id="namelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true">
-		
-		</ul>
+		<ul id="namelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
+		<input type="button" id="loadmore" value="Load More">
 		<!-- /content -->
-
-		<div data-role="footer" id="footer" data-position="fixed">
-			<div data-role="nav-bar" id="navbar"></div>
-		</div>
-		<!-- /footer -->
 	</div>
+	
+	<div data-role="page" id="girlnamelistpage">
+		<div data-role="header">
+			<h5>Girl Names</h3>
+		</div>
+		<!-- /header -->
+		<ul id="namelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
+		<input type="button" id="loadmore" value="Load More">
+		<!-- /content -->
+	</div>
+	
+		<div data-role="page" id="boynamelistpage">
+		<div data-role="header">
+			<h5>Boy Names</h3>
+		</div>
+		<!-- /header -->
+		<ul id="namelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
+		<input type="button" id="loadmore" value="Load More">
+		<!-- /content -->
+	</div>
+		
+	<div data-role="page" id="allnamelistpage">
+		<div data-role="header">
+			<h5>All Names</h3>
+		</div>
+		<!-- /header -->
+		<ul id="namelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
+		<input type="button" id="loadmore" value="Load More">
+		<!-- /content -->
+	</div>
+
+	
 	<!-- /page -->
 	<script type="text/javascript" src="cordova.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>

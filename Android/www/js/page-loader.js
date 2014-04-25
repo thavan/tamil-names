@@ -42,5 +42,5 @@ $(document).on('pageshow', "#namelistpage", function() {
 		theme: 'z',
 		html: ""
 	});
-	Service.call('/name/', {});
+	Service.call('/api/name/', {});
 });

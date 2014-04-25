@@ -2,7 +2,7 @@
  * Service call.
  */
 
-base_url = "http://bnapi2-skynetdev.rhcloud.com/api";
+base_url = "http://bnapi2-skynetdev.rhcloud.com";
 username = "android-client";
 api_key = "5d304dc25b7105da3933e946bf323c4dad998eb4";
 
@@ -21,7 +21,9 @@ var Service = Service || {
 		    $.each( names.objects, function ( i, val ) {
 		        html += "<li>" + val.english_name + "</li>";
 		    });
-		    this.next = names.meta.next;
+		    var next_url = names.meta.next;
+		    console.log(next_url);
+		    $("#loadmore").attr('next', next_url);
 		    var $ul = $("#namelistpage_ul")
 		    $ul.html( html );
 		    console.log(html);
@@ -38,7 +40,7 @@ var Service = Service || {
 
 	loadmore: function (){
 		var request = $.ajax({
-			url: this.next,
+			url: base_url + $("#loadmore").attr('next'),
 			type: "GET",
 			data: {}
 		});
@@ -48,16 +50,17 @@ var Service = Service || {
 		    $.each( names.objects, function ( i, val ) {
 		        html += "<li>" + val.english_name + "</li>";
 		    });
-		    html += "<input id='loadmore' type='button' value='Load More'>";
-		    this.next = names.meta.next;
+		    var next_url = names.meta.next;
+		    console.log(next_url);
+		    $("#loadmore").attr('next', next_url);
 		    var $ul = $("#namelistpage_ul")
 		    $ul.html( html );
 		    console.log(html);
 		    console.log($ul);
 		    $ul.listview( "refresh" );
 		    $ul.trigger( "updatelayout");
-		    $.mobile.loading( 'hide' );
-		    
+		    $.mobile.loading( 'hide' ); 
+		    $('body,html').animate({scrollTop:0},800);
 		});
 		request.fail(function (jqXHR, textStatus){
 			console.log(textStatus);
