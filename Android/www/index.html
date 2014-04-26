@@ -34,7 +34,7 @@
 <body>
 	<div data-role="page" id="homepage">
 		<div data-role="header">
-			<h5>Baby Names</h3>
+			<h5>Tamil Baby Names</h3>
 		</div>
 		<!-- /header -->
 
@@ -43,16 +43,16 @@
 			    <input type="search" name="search" id="search-field" value="" placeholder="Search by letters!">
 				<input type="button" id="search-button" value="Search">
 				<ul data-role="listview" data-count-theme="b" data-inset="true">
-					<li><a href="#namelistpage" id="girlname_list">Girl names<span class="ui-li-count">20000</span></a></li>
-					<li><a href="#" id="boyname_list">Boy names<span class="ui-li-count">18000</span></a></li>
-					<li><a href="#" id="allname_list">Boy names<span class="ui-li-count">38000</span></a></li>
+					<li><a href="#girlnamelistpage" id="girlname_list">Girl Names<span class="ui-li-count">20000</span></a></li>
+					<li><a href="#boynamelistpage" id="boyname_list">Boy Names<span class="ui-li-count">18000</span></a></li>
+					<li><a href="#allnamelistpage" id="allname_list">All Names<span class="ui-li-count">38000</span></a></li>
 				</ul>
 				<ul data-role="listview" data-count-theme="b" data-inset="true">
-					<li><a href="#" id="lucky">I'm feeling lucky!</a></li>
+					<li><a href="#randomnamelistpage" id="lucky">I'm Feeling Lucky!</a></li>
 				</ul>
 				<ul data-role="listview" data-count-theme="b" data-inset="true">
-					<li><a href="#namelistpage" id="girlname_list">Girl Names (A to Z)</a></li>
-					<li><a href="#namelistpage" id="girlname_list">Boy Names (A to Z)</a></li>
+					<li><a href="#atozgirlnamelistpage" id="girlname_list">Girl Names (A to Z)</a></li>
+					<li><a href="#atozboynamelistpage" id="girlname_list">Boy Names (A to Z)</a></li>
 				</ul>
 			</div>
 		</div>
@@ -65,8 +65,8 @@
 			<h5>Search Results</h3>
 		</div>
 		<!-- /header -->
-		<ul id="namelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
-		<input type="button" id="loadmore" value="Load More">
+		<ul id="searchlistpage_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
+		<input type="button" id="searchloadmore" value="Load More" class="ui-btn"">
 		<!-- /content -->
 	</div>
 	
@@ -75,8 +75,8 @@
 			<h5>Girl Names</h3>
 		</div>
 		<!-- /header -->
-		<ul id="namelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
-		<input type="button" id="loadmore" value="Load More">
+		<ul id="girlnamelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
+		<input type="button" id="girlloadmore" value="Load More" class="ui-btn">
 		<!-- /content -->
 	</div>
 	
@@ -85,8 +85,8 @@
 			<h5>Boy Names</h3>
 		</div>
 		<!-- /header -->
-		<ul id="namelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
-		<input type="button" id="loadmore" value="Load More">
+		<ul id="boynamelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
+		<input type="button" id="boyloadmore" value="Load More" class="ui-btn">
 		<!-- /content -->
 	</div>
 		
@@ -95,18 +95,110 @@
 			<h5>All Names</h3>
 		</div>
 		<!-- /header -->
-		<ul id="namelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
-		<input type="button" id="loadmore" value="Load More">
+		<ul id="allnamelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
+		<input type="button" id="allloadmore" value="Load More" class="ui-btn">
 		<!-- /content -->
 	</div>
 
+	<div data-role="page" id="randomnamelistpage">
+		<div data-role="header">
+			<h5>Search Results</h3>
+		</div>
+		<!-- /header -->
+		<ul id="randomlistpage_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
+		<input type="button" id="randomloadmore" value="Load More" class="ui-btn">
+		<!-- /content -->
+	</div>
+
+	<div data-role="page" id="atozgirlnamelistpage">
+		<div data-role="header">
+			<h5>A - Z Girl Names</h3>
+		</div>
+		<!-- /header -->
+		<ul id="atozgirlnamelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true">
+		<li><a href="#" id="alpha_ga">A</a></li>
+		<li><a href="#" id="alpha_gb">B</a></li>
+		<li><a href="#" id="alpha_gc">C</a></li>
+		<li><a href="#" id="alpha_gd">D</a></li>
+		<li><a href="#" id="alpha_ge">E</a></li>
+		<li><a href="#" id="alpha_gf">F</a></li>
+		<li><a href="#" id="alpha_gg">G</a></li>
+		<li><a href="#" id="alpha_gh">H</a></li>
+		<li><a href="#" id="alpha_gi">I</a></li>
+		<li><a href="#" id="alpha_gj">J</a></li>
+		<li><a href="#" id="alpha_gk">K</a></li>
+		<li><a href="#" id="alpha_gl">L</a></li>
+		<li><a href="#" id="alpha_gm">M</a></li>
+		<li><a href="#" id="alpha_gn">N</a></li>
+		<li><a href="#" id="alpha_go">O</a></li>
+		<li><a href="#" id="alpha_gp">P</a></li>
+		<li><a href="#" id="alpha_gq">Q</a></li>
+		<li><a href="#" id="alpha_gr">R</a></li>
+		<li><a href="#" id="alpha_gs">S</a></li>
+		<li><a href="#" id="alpha_gt">T</a></li>
+		<li><a href="#" id="alpha_gu">U</a></li>
+		<li><a href="#" id="alpha_gv">V</a></li>
+		<li><a href="#" id="alpha_gw">W</a></li>
+		<li><a href="#" id="alpha_gx">X</a></li>
+		<li><a href="#" id="alpha_gy">Y</a></li>
+		<li><a href="#" id="alpha_gz">Z</a></li>
+		</ul>
+		<!-- /content -->
+	</div>
+	
+		<div data-role="page" id="atozboynamelistpage">
+		<div data-role="header">
+			<h5>Search Results</h3>
+		</div>
+		<!-- /header -->
+		<ul id="atozboynamelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true">
+		<li><a href="#" id="alpha_ba">A</a></li>
+		<li><a href="#" id="alpha_bb">B</a></li>
+		<li><a href="#" id="alpha_bc">C</a></li>
+		<li><a href="#" id="alpha_bd">D</a></li>
+		<li><a href="#" id="alpha_be">E</a></li>
+		<li><a href="#" id="alpha_bf">F</a></li>
+		<li><a href="#" id="alpha_bg">G</a></li>
+		<li><a href="#" id="alpha_bh">H</a></li>
+		<li><a href="#" id="alpha_bi">I</a></li>
+		<li><a href="#" id="alpha_bj">J</a></li>
+		<li><a href="#" id="alpha_bk">K</a></li>
+		<li><a href="#" id="alpha_bl">L</a></li>
+		<li><a href="#" id="alpha_bm">M</a></li>
+		<li><a href="#" id="alpha_bn">N</a></li>
+		<li><a href="#" id="alpha_bo">O</a></li>
+		<li><a href="#" id="alpha_bp">P</a></li>
+		<li><a href="#" id="alpha_bq">Q</a></li>
+		<li><a href="#" id="alpha_br">R</a></li>
+		<li><a href="#" id="alpha_bs">S</a></li>
+		<li><a href="#" id="alpha_bt">T</a></li>
+		<li><a href="#" id="alpha_bu">U</a></li>
+		<li><a href="#" id="alpha_bv">V</a></li>
+		<li><a href="#" id="alpha_bw">W</a></li>
+		<li><a href="#" id="alpha_bx">X</a></li>
+		<li><a href="#" id="alpha_by">Y</a></li>
+		<li><a href="#" id="alpha_bz">Z</a></li>
+		</ul>
+		<!-- /content -->
+	</div>
+	
+	<div data-role="page" id="alphapage">
+		<div data-role="header">
+			<h5>A-Z</h3>
+		</div>
+		<!-- /header -->
+		<ul id="alphalist_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
+		<input type="button" id="alphaloadmore" value="Load More" class="ui-btn">
+		<!-- /content -->
+	</div>
+	
 	
 	<!-- /page -->
 	<script type="text/javascript" src="cordova.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/alljs.js"></script>
 	<script type="text/javascript" src="js/service.js"></script>
-	<script type="text/javascript" src="js/page-loader.js"></script>
+
 	<script type="text/javascript">
 	app.initialize();
 	</script>

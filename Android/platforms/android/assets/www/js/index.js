@@ -38,6 +38,8 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         console.log('Device REady: ' + id);
-//        JS.process_home();
+        JS.assign_events();
+        JS.hide_elements();
+        JS.bind_elements();
     }
 };

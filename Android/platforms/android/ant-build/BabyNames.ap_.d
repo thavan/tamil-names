@@ -248,7 +248,6 @@ G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\jquery\
 G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\jquery\images\icons-svg\video-white.svg \
 G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\js\alljs.js \
 G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\js\index.js \
-G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\js\page-loader.js \
 G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\js\service.js \
 G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\menus\default.html \
 G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\pages\home.html \
