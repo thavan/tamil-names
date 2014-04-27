@@ -26,20 +26,27 @@ var Service = Service || {
 			console.log(names);
 			var html = "";
 		    $.each( names.objects, function ( i, val ) {
-		        html += "<li>" + val.english_name + "</li>";
+		    	if(val.gender=='F'){
+		    		html += "<li><font color='purple'>" + val.english_name + "</font></li>";
+		    	}
+		    	else{
+		    		html += "<li><font color='blue'>" + val.english_name + "</font></li>";
+		    	}
 		    });
 		    var next_url = names.meta.next;
 		    console.log(next_url);
 		    if(next_url != null){
 		    	$(load_more_tag).attr('next', next_url);
-		    	$(load_more_tag).attr('disabled',false)
+		    	$(load_more_tag).attr('disabled',false);
+		    	$(load_more_tag+"div").show();
 		    }
 		    else{
-		    	$(load_more_tag).attr('disabled',true)
-		    	$(load_more_tag).text("No more records!")
+		    	$(load_more_tag).attr('disabled',true);
+		    	$(load_more_tag).text("No more records!");
+		    	$(load_more_tag+"div").hide();
 		    }
 		    	
-		    var $ul = $(list_name)
+		    var $ul = $(list_name);
 		    $ul.html( html );
 		    console.log(html);
 		    $ul.listview( "refresh" );
@@ -52,6 +59,12 @@ var Service = Service || {
 	},
 
 	loadmore: function (list_tag, loadmore_tag){
+		$.mobile.loading( 'show', {
+			text: 'Loading...',
+			textVisible: true,
+			theme: 'z',
+			html: ""
+		});
 		var request = $.ajax({
 			url: base_url + $(loadmore_tag).attr('next'),
 			type: "GET",
@@ -61,26 +74,29 @@ var Service = Service || {
 			console.log("triggerd");
 			var html = "";
 		    $.each( names.objects, function ( i, val ) {
-		        html += "<li>" + val.english_name + "</li>";
+		    	if(val.gender=='F'){
+		    		html += "<li><font color='purple'>" + val.english_name + "</font></li>";
+		    	}
+		    	else{
+		    		html += "<li><font color='blue'>" + val.english_name + "</font></li>";
+		    	}
 		    });
 		    var next_url = names.meta.next;
 		    console.log(next_url);
 		    
 		    if(next_url != null){
 		    	$(loadmore_tag).attr('next', next_url);
-		    	$(loadmore_tag).attr('disabled',false)
+		    	$(loadmore_tag + "div").show();
 		    }
 		    else{
-		    	$(loadmore_tag).attr('disabled',true)
-		    	$(loadmore_tag).text("No more records!")
-		    }
+		    	$(loadmore_tag).attr('disabled',true);		    }
 		    var $ul = $(list_tag);
 		    $ul.html( html );
 		    console.log(html);
 		    $ul.listview( "refresh" );
 		    $ul.trigger( "updatelayout");
 		    $.mobile.loading( 'hide' ); 
-		    $('body,html').animate({scrollTop:0},800);
+		    $('body,html').animate({scrollTop:0},0);
 		});
 		request.fail(function (jqXHR, textStatus){
 			console.log(textStatus);

@@ -22,6 +22,7 @@ G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\jquery 
 G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\js \
 G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\menus \
 G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\pages \
+G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\plugins \
 G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\css\index.css \
 G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\img\logo.png \
 G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\jquery\images \
@@ -252,4 +253,16 @@ G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\js\serv
 G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\menus\default.html \
 G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\pages\home.html \
 G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\pages\name_list.html \
+G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\plugins\org.apache.cordova.dialogs \
+G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\plugins\org.apache.cordova.network-information \
+G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\plugins\org.apache.cordova.vibration \
+G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\plugins\org.apache.cordova.dialogs\www \
+G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\plugins\org.apache.cordova.dialogs\www\android \
+G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\plugins\org.apache.cordova.dialogs\www\notification.js \
+G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\plugins\org.apache.cordova.dialogs\www\android\notification.js \
+G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www \
+G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www\Connection.js \
+G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www\network.js \
+G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\plugins\org.apache.cordova.vibration\www \
+G:\AndroidProjects\tamil-baby-names\Android\platforms\android\assets\www\plugins\org.apache.cordova.vibration\www\vibration.js \
 G:\AndroidProjects\tamil-baby-names\Android\platforms\android\ant-build\AndroidManifest.xml \

@@ -38,8 +38,20 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         console.log('Device REady: ' + id);
+//        var network_state = JS.check_network();
+        if(navigator.connection.type == Connection.NONE){
+        	console.log("No Internet");
+        	navigator.notification.alert(
+                    'You need working internet connection to use this App.',  // message
+                    navigator.app.exitApp,         // callback
+                    'No Internet!',            // title
+                    'Done'                  // buttonName
+                );
+//        	navigator.app.exitApp();
+        }
         JS.assign_events();
-        JS.hide_elements();
+        
         JS.bind_elements();
+        JS.hide_elements();
     }
 };

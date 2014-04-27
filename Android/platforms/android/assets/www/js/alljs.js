@@ -4,11 +4,9 @@
 
 var JS = JS
 		|| {
-			process_home : function() {
-				data = {}
-				data.format = "json"
-				var response = Service.call("/name/", data)
-				console.log(response);
+			check_network : function() {
+				var networkState = navigator.connection.type;
+				console.log(networkState);
 			},
 			test : "test",
 
@@ -16,20 +14,22 @@ var JS = JS
 				$('ul#atozgirlnamelistpage_ul li').click(function() {
 					$.mobile.changePage("#alphapage");
 					JS.alpha_search = $(this).text();
+					JS.alpha_gender = 'F';
 				});
 				$('ul#atozboynamelistpage_ul li').click(function() {
 					$.mobile.changePage("#alphapage");
 					JS.alpha_search = $(this).text();
+					JS.alpha_gender = 'M';
 				});
 			},
 
 			hide_elements : function() {
-				// $('#allloadmore').hide();
-				// $('#girlloadmore').hide();
-				// $('#boyloadmore').hide();
-				// $('#searchloadmore').hide();
-				// $('#randomloadmore').hide();
-				// $('#alphaloadmore').hide();
+//				 $('#allloadmore').hide();
+//				 $('#girlloadmore').hide();
+//				 $('#boyloadmore').hide();
+//				 $('#searchloadmore').hide();
+//				 $('#randomloadmore').hide();
+//				 $('#alphaloadmore').hide();
 			},
 
 			bind_elements : function() {
@@ -89,7 +89,7 @@ var JS = JS
 						'pageshow',
 						"#randomnamelistpage",
 						function() {
-							Service.call('/api/random/', {},
+							Service.call('/api/random/', {"random": Math.random()},
 									'#randomlistpage_ul', "#randomloadmore");
 						});
 
@@ -100,7 +100,8 @@ var JS = JS
 				$(document).on('pageshow', "#alphapage", function() {
 					Service.call('/api/search/', {
 						"query" : JS.alpha_search,
-						"alpha" : 1
+						"alpha" : 1,
+						"gender" : JS.alpha_gender
 					}, '#alphalist_ul', "#alphaloadmore");
 				});
 

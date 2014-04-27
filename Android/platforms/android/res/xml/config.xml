@@ -4,12 +4,21 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
-    <name>BabyNames</name>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
+    <feature name="Vibration">
+        <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <name>Tamil Names</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Browse Tamil baby names.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="tt@thava.me" href="http://thava.me">
+        Thavanathan T
     </author>
     <content src="index.html" />
     <access origin="*" />
