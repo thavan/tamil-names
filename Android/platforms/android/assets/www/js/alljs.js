@@ -24,12 +24,7 @@ var JS = JS
 			},
 
 			hide_elements : function() {
-//				 $('#allloadmore').hide();
-//				 $('#girlloadmore').hide();
-//				 $('#boyloadmore').hide();
-//				 $('#searchloadmore').hide();
-//				 $('#randomloadmore').hide();
-//				 $('#alphaloadmore').hide();
+
 			},
 
 			bind_elements : function() {
