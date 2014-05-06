@@ -24,15 +24,18 @@
 <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
 <meta name="viewport"
 	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
-<link rel="stylesheet" type="text/css"
-	href="jquery/jquery.mobile-1.4.2.css">
+<link rel="stylesheet" type="text/css" href="jquery/jquery.mobile-1.4.2.css">
+<link rel="stylesheet" href="themes/bntheme.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+
 <link rel="stylesheet" type="text/css" href="css/index.css" />
 <title>Hello World</title>
 <script type="text/javascript" src="jquery/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="jquery/jquery.mobile-1.4.2.js"></script>
+
 </head>
 <body>
-	<div data-role="page" id="homepage">
+	<div data-role="page" id="homepage" data-theme="c">
 		<div data-role="header">
 			<h5>Tamil Names</h5>
 		</div>
@@ -41,16 +44,16 @@
 		<div data-role="content" id="content">
 			<div data-role="main" class="ui-content" id="total-count">
 			    <input type="search" name="search" id="search-field" value="" placeholder="Search by letters!">
-				<input type="button" id="search-button" value="Search">
-				<ul data-role="listview" data-count-theme="b" data-inset="true">
+				<input type="button" data-theme="c" id="search-button" value="Search">
+				<ul data-role="listview" data-theme="c" data-inset="true">
 					<li><a href="#girlnamelistpage" id="girlname_list">Girl Names<span class="ui-li-count">20000</span></a></li>
 					<li><a href="#boynamelistpage" id="boyname_list">Boy Names<span class="ui-li-count">18000</span></a></li>
 					<li><a href="#allnamelistpage" id="allname_list">All Names<span class="ui-li-count">38000</span></a></li>
 				</ul>
-				<ul data-role="listview" data-count-theme="b" data-inset="true">
+				<ul data-role="listview" data-theme="c" data-inset="true">
 					<li><a href="#randomnamelistpage" id="lucky">I'm Feeling Lucky!</a></li>
 				</ul>
-				<ul data-role="listview" data-count-theme="b" data-inset="true">
+				<ul data-role="listview" data-theme="c" data-inset="true">
 					<li><a href="#atozgirlnamelistpage" id="girlname_list">Girl Names (A to Z)</a></li>
 					<li><a href="#atozboynamelistpage" id="girlname_list">Boy Names (A to Z)</a></li>
 				</ul>
@@ -60,72 +63,72 @@
 	</div>
 	<!-- /page -->
 
-	<div data-role="page" id="searchlistpage">
+	<div data-role="page" id="searchlistpage"  data-theme="c">
 		<div data-role="header">
 			<h5>Search Results</h5>
 		</div>
 		<!-- /header -->
-		<ul id="searchlistpage_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
+		<div id="searchlistpage_ul"></div>
 		<div id="searchloadmorediv" style="display:none">
-			<input type="button" id="searchloadmore" value="Load More" class="ui-btn">
+			<input type="button" data-theme="c" id="searchloadmore" value="Load More" class="ui-btn ui-btn-b">
 		</div>
 		<!-- /content -->
 	</div>
 	
-	<div data-role="page" id="girlnamelistpage">
+	<div data-role="page" id="girlnamelistpage"  data-theme="c">
 		<div data-role="header">
 			<h5>Girl Names</h5>
 		</div>
 		<!-- /header -->
-		<ul id="girlnamelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
+		<div id="girlnamelistpage_ul"></div>
 		<div id="girlloadmorediv" style="display:none">
-			<input type="button" id="girlloadmore" value="Load More" class="ui-btn">
+			<input type="button" data-theme="c" id="girlloadmore" value="Load More" class="ui-btn">
 		</div>
 		<!-- /content -->
 	</div>
 	
-		<div data-role="page" id="boynamelistpage">
+		<div data-role="page" id="boynamelistpage"  data-theme="c">
 		<div data-role="header">
 			<h5>Boy Names</h5>
 		</div>
 		<!-- /header -->
-		<ul id="boynamelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
+		<div id="boynamelistpage_ul"></div>
 		<div id="boyloadmorediv" style="display:none">
-		<input type="button" id="boyloadmore" value="Load More" class="ui-btn">
+		<input type="button" data-theme="c" id="boyloadmore" value="Load More" class="ui-btn">
 		</div>
 		<!-- /content -->
 	</div>
 		
-	<div data-role="page" id="allnamelistpage">
+	<div data-role="page" id="allnamelistpage"  data-theme="c">
 		<div data-role="header">
 			<h5>All Names</h5>
 		</div>
 		<!-- /header -->
-		<ul id="allnamelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
+		<div id="allnamelistpage_ul"></div>
 		<div id="allloadmorediv" style="display:none">
-		<input type="button" id="allloadmore" value="Load More" class="ui-btn">
+		<input type="button" data-theme="c" id="allloadmore" value="Load More" class="ui-btn">
 		</div>
 		<!-- /content -->
 	</div>
 
-	<div data-role="page" id="randomnamelistpage">
+	<div data-role="page" id="randomnamelistpage"  data-theme="c">
 		<div data-role="header">
 			<h5>I'm Feeling Lucky!</h5>
 		</div>
 		<!-- /header -->
-		<ul id="randomlistpage_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
+		<div id="randomlistpage_ul"></div>
 		<div id="randomloadmorediv" style="display:none">
-			<input type="button" id="randomloadmore" value="Load More" class="ui-btn">
+			<input type="button" data-theme="c" id="randomloadmore" value="Load More" class="ui-btn">
 		</div>
 		<!-- /content -->
 	</div>
 
-	<div data-role="page" id="atozgirlnamelistpage">
+	<div data-role="page" id="atozgirlnamelistpage"  data-theme="c">
 		<div data-role="header">
 			<h5>A - Z Girl Names</h5>
 		</div>
 		<!-- /header -->
-		<ul id="atozgirlnamelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true">
+		<ul id="atozgirlnamelistpage_ul" data-role="listview" data-theme="c" data-inset="true">
 		<li><a href="#" id="alpha_ga">A</a></li>
 		<li><a href="#" id="alpha_gb">B</a></li>
 		<li><a href="#" id="alpha_gc">C</a></li>
@@ -156,12 +159,12 @@
 		<!-- /content -->
 	</div>
 	
-		<div data-role="page" id="atozboynamelistpage">
+		<div data-role="page" id="atozboynamelistpage"  data-theme="c">
 		<div data-role="header">
 			<h5>A - Z Boy Names</h5>
 		</div>
 		<!-- /header -->
-		<ul id="atozboynamelistpage_ul" data-role="listview" data-count-theme="b" data-inset="true">
+		<ul id="atozboynamelistpage_ul" data-role="listview" data-theme="c" data-inset="true">
 		<li><a href="#" id="alpha_ba">A</a></li>
 		<li><a href="#" id="alpha_bb">B</a></li>
 		<li><a href="#" id="alpha_bc">C</a></li>
@@ -192,14 +195,14 @@
 		<!-- /content -->
 	</div>
 	
-	<div data-role="page" id="alphapage">
+	<div data-role="page" id="alphapage"  data-theme="c">
 		<div data-role="header">
 			<h5>A - Z Names</h5>
 		</div>
 		<!-- /header -->
-		<ul id="alphalist_ul" data-role="listview" data-count-theme="b" data-inset="true"></ul>
+		<div id="alphalist_ul"></div>
 		<div id="alphaloadmorediv" style="display:none">
-		<input type="button" id="alphaloadmore" value="Load More" class="ui-btn">
+		<input type="button" data-theme="c" id="alphaloadmore" value="Load More" class="ui-btn">
 		</div>
 		<!-- /content -->
 	</div>

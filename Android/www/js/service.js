@@ -27,10 +27,14 @@ var Service = Service || {
 			var html = "";
 		    $.each( names.objects, function ( i, val ) {
 		    	if(val.gender=='F'){
-		    		html += "<li><font color='purple'>" + val.english_name + "</font></li>";
+		    		html += "<ul data-role='listview' data-theme='a'>";
+		    		html += "<li class='ui-btn'>" + val.english_name + "</li>";
+		    		html += "</ul>";
 		    	}
 		    	else{
-		    		html += "<li><font color='blue'>" + val.english_name + "</font></li>";
+		    		html += "<ul data-role='listview' data-theme='b'>";
+		    		html += "<li class='ui-btn'>" + val.english_name + "</li>";
+		    		html += "</ul>";
 		    	}
 		    });
 		    var next_url = names.meta.next;
@@ -49,7 +53,7 @@ var Service = Service || {
 		    var $ul = $(list_name);
 		    $ul.html( html );
 		    console.log(html);
-		    $ul.listview( "refresh" );
+		    $ul.trigger( "create" );
 		    $ul.trigger( "updatelayout");
 		    $.mobile.loading( 'hide' );
 		});
@@ -75,10 +79,14 @@ var Service = Service || {
 			var html = "";
 		    $.each( names.objects, function ( i, val ) {
 		    	if(val.gender=='F'){
-		    		html += "<li><font color='purple'>" + val.english_name + "</font></li>";
+		    		html += "<ul data-role='listview' data-theme='a'>";
+		    		html += "<li class='ui-btn'>" + val.english_name + "</li>";
+		    		html += "</ul>";
 		    	}
 		    	else{
-		    		html += "<li><font color='blue'>" + val.english_name + "</font></li>";
+		    		html += "<ul data-role='listview' data-theme='b'>";
+		    		html += "<li class='ui-btn'>" + val.english_name + "</li>";
+		    		html += "</ul>";
 		    	}
 		    });
 		    var next_url = names.meta.next;
@@ -93,7 +101,7 @@ var Service = Service || {
 		    var $ul = $(list_tag);
 		    $ul.html( html );
 		    console.log(html);
-		    $ul.listview( "refresh" );
+		    $ul.trigger( "create" );
 		    $ul.trigger( "updatelayout");
 		    $.mobile.loading( 'hide' ); 
 		    $('body,html').animate({scrollTop:0},0);
