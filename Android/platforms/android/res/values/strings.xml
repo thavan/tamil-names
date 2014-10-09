@@ -1,4 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
     <string name="app_name">Tamil Names</string>
+    <string name="activity_name">Tamil Names</string>
+    <string name="launcher_name">Tamil Names</string>
 </resources>

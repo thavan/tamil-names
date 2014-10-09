@@ -1,1 +1,1 @@
- : G:\AndroidProjects\tamil-names-android\Android\platforms\android\CordovaLib\ant-build\AndroidManifest.xml \
+ : /home/thavan/workspace/tamil-names/Android/platforms/android/CordovaLib/ant-build/AndroidManifest.xml \
