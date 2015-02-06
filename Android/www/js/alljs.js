@@ -36,7 +36,7 @@ var JS = JS
 						'pageshow',
 						"#allnamelistpage",
 						function() {
-							Service.call('/api/name/', {},
+							Service.call('/name/', {},
 									'#allnamelistpage_ul', "#allloadmore");
 						});
 
@@ -48,7 +48,7 @@ var JS = JS
 						'pageshow',
 						"#girlnamelistpage",
 						function() {
-							Service.call('/api/femalename/', {},
+							Service.call('/femalename/', {},
 									'#girlnamelistpage_ul', "#girlloadmore");
 						});
 
@@ -60,7 +60,7 @@ var JS = JS
 						'pageshow',
 						"#boynamelistpage",
 						function() {
-							Service.call('/api/malename/', {},
+							Service.call('/malename/', {},
 									'#boynamelistpage_ul', "#boyloadmore");
 						});
 
@@ -70,7 +70,7 @@ var JS = JS
 
 				$(document).on('pageshow', "#searchlistpage", function() {
 					var search_query = $("#search-field").val();
-					Service.call('/api/search/', {
+					Service.call('/search/', {
 						'query' : search_query,
 						'contains' : 1
 					}, '#searchlistpage_ul', "#searchloadmore");
@@ -84,7 +84,7 @@ var JS = JS
 						'pageshow',
 						"#randomnamelistpage",
 						function() {
-							Service.call('/api/random/', {"random": Math.random()},
+							Service.call('/random/', {"random": Math.random()},
 									'#randomlistpage_ul', "#randomloadmore");
 						});
 
@@ -93,7 +93,7 @@ var JS = JS
 				});
 
 				$(document).on('pageshow', "#alphapage", function() {
-					Service.call('/api/search/', {
+					Service.call('/search/', {
 						"query" : JS.alpha_search,
 						"alpha" : 1,
 						"gender" : JS.alpha_gender

@@ -2,7 +2,8 @@
  * Service call.
  */
 
-base_url = "http://bnapi2-skynetdev.rhcloud.com";
+base_url = "http://tn.thava.me";
+api_version = "/api/v1"
 username = "android-client";
 api_key = "5d304dc25b7105da3933e946bf323c4dad998eb4";
 
@@ -18,7 +19,7 @@ var Service = Service || {
 		data.api_key = api_key;
 		data.format = "json";
 		var request = $.ajax({
-			url: base_url + sub_url,
+			url: base_url + api_version + sub_url,
 			type: "GET",
 			data: data
 		});
