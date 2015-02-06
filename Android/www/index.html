@@ -35,7 +35,7 @@
 
 </head>
 <body>
-	<div data-role="page" id="homepage" data-theme="c">
+	<div data-role="page" id="homepage" data-theme="b">
 		<div data-role="header">
 			<h5>Tamil Names</h5>
 		</div>
@@ -44,6 +44,18 @@
 		<div data-role="content" id="content">
 			<div data-role="main" class="ui-content" id="total-count">
 			    <input type="search" name="search" id="search-field" value="" placeholder="Search by letters!">
+                <div>
+                <table width="100%">
+                    <tr>
+                        <td width="70%">
+                            <p>Starting letters?</p>
+                        </td>
+                        <td width="30%">
+                            <input type="checkbox" name="letter_start" id="id_letter_start" data-role="flipswitch" data-theme="c" style="margin-right: 0;">
+                        </td>
+                    </tr>
+                </table>
+                    </div>
 				<input type="button" data-theme="c" id="search-button" value="Search">
 				<ul data-role="listview" data-theme="c" data-inset="true">
 					<li><a href="#girlnamelistpage" id="girlname_list">Girl Names<span class="ui-li-count">20000</span></a></li>
