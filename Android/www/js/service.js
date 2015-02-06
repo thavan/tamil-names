@@ -2,7 +2,8 @@
  * Service call.
  */
 
-base_url = "http://tn.thava.me";
+base_url = "http://172.18.8.193:8000";
+//base_url = "http://tn.thava.me";
 api_version = "/api/v1"
 username = "android-client";
 api_key = "5d304dc25b7105da3933e946bf323c4dad998eb4";
@@ -15,6 +16,8 @@ var Service = Service || {
 			theme: 'z',
 			html: ""
 		});
+        console.log(data);
+        console.log('Hello world');
 		data.username = username;
 		data.api_key = api_key;
 		data.format = "json";

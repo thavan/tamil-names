@@ -36,6 +36,7 @@ var JS = JS
 						'pageshow',
 						"#allnamelistpage",
 						function() {
+                            data =
 							Service.call('/name/', {},
 									'#allnamelistpage_ul', "#allloadmore");
 						});
@@ -72,7 +73,9 @@ var JS = JS
 					var search_query = $("#search-field").val();
 					Service.call('/search/', {
 						'query' : search_query,
-						'contains' : 1
+						'contains' : 1,
+                        "alpha": $("#id_letter_start").val(),
+                        "gender": $('#id_search_gender').val()
 					}, '#searchlistpage_ul', "#searchloadmore");
 				});
 
@@ -104,5 +107,5 @@ var JS = JS
 					console.log("clicked load more");
 					Service.loadmore('#alphalist_ul', "#alphaloadmore");
 				});
-			},
-		}
+			}
+}

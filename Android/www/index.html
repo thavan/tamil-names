@@ -44,19 +44,26 @@
 		<div data-role="content" id="content">
 			<div data-role="main" class="ui-content" id="total-count">
 			    <input type="search" name="search" id="search-field" value="" placeholder="Search by letters!">
-                <div>
-                <table width="100%">
-                    <tr>
-                        <td width="70%">
-                            <p>Starting letters?</p>
-                        </td>
-                        <td width="30%">
-                            <input type="checkbox" name="letter_start" id="id_letter_start" data-role="flipswitch" data-theme="c" style="margin-right: 0;">
-                        </td>
-                    </tr>
-                </table>
+                <div class="ui-field-contain">
+                <fieldset data-role="controlgroup" data-mini="true" style="float:left;">
+                    <p>Starting letters?</p>
+                    <select type="checkbox" name="letter_start" id="id_letter_start" data-role="flipswitch" data-theme="c" style="float: right">
+                        <option value="1">On</option>
+                        <option value="0">Off</option>
+                    </select>
+                </fieldset>
+                </div>
+                <div  class="ui-field-contain">
+                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                    <legend>Gender</legend>
+                    <select name="letter_start" id="id_search_gender" data-role="flipswitch" data-theme="c" style="float: right;">
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </fieldset>
                     </div>
 				<input type="button" data-theme="c" id="search-button" value="Search">
+                    </ul>
 				<ul data-role="listview" data-theme="c" data-inset="true">
 					<li><a href="#girlnamelistpage" id="girlname_list">Girl Names<span class="ui-li-count">20000</span></a></li>
 					<li><a href="#boynamelistpage" id="boyname_list">Boy Names<span class="ui-li-count">18000</span></a></li>
