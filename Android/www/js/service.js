@@ -2,7 +2,7 @@
  * Service call.
  */
 
-base_url = "http://bnapi2-skynetdev.rhcloud.com";
+base_url = "http://tn.thava.me";
 username = "android-client";
 api_key = "5d304dc25b7105da3933e946bf323c4dad998eb4";
 
