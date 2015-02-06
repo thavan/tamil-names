@@ -3,10 +3,7 @@
  */
 
 base_url = "http://tn.thava.me";
-<<<<<<< HEAD
 api_version = "/api/v1"
-=======
->>>>>>> 998fc6d2fd1db3e9c3ebdfc59f3329215a6b669d
 username = "android-client";
 api_key = "5d304dc25b7105da3933e946bf323c4dad998eb4";
 
